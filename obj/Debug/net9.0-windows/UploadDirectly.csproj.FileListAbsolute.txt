@@ -30,3 +30,4 @@ D:\_Developing_\UploadDirectly\obj\Debug\net9.0-windows\refint\UploadDirectly.dl
 D:\_Developing_\UploadDirectly\obj\Debug\net9.0-windows\UploadDirectly.pdb
 D:\_Developing_\UploadDirectly\obj\Debug\net9.0-windows\UploadDirectly.genruntimeconfig.cache
 D:\_Developing_\UploadDirectly\obj\Debug\net9.0-windows\ref\UploadDirectly.dll
+D:\_Developing_\UploadDirectly\obj\Debug\net9.0-windows\UploadDirectly.sourcelink.json

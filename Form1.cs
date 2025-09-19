@@ -57,6 +57,10 @@ namespace UploadDirectly
                 }
 
                 MessageBox.Show("Upload process completed!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (chkHibernate.Checked)
+                {
+                    Application.SetSuspendState(PowerState.Hibernate, true, true);
+                }
             }
         }
 

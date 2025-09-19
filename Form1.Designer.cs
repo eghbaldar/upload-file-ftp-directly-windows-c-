@@ -59,6 +59,7 @@
             configuesToolStripMenuItem = new ToolStripMenuItem();
             saveTheConfigueToolStripMenuItem = new ToolStripMenuItem();
             loadAConfigueToolStripMenuItem = new ToolStripMenuItem();
+            chkHibernate = new CheckBox();
             pnlFtp.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -333,11 +334,22 @@
             loadAConfigueToolStripMenuItem.Text = "Load a Configue";
             loadAConfigueToolStripMenuItem.Click += loadAConfigueToolStripMenuItem_Click;
             // 
+            // chkHibernate
+            // 
+            chkHibernate.AutoSize = true;
+            chkHibernate.Location = new Point(26, 94);
+            chkHibernate.Name = "chkHibernate";
+            chkHibernate.Size = new Size(237, 24);
+            chkHibernate.TabIndex = 21;
+            chkHibernate.Text = "Hibernate after upload process";
+            chkHibernate.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1440, 787);
+            Controls.Add(chkHibernate);
             Controls.Add(txtvirtualPath);
             Controls.Add(label5);
             Controls.Add(txtFolder);
@@ -398,5 +410,6 @@
         private ToolStripMenuItem configuesToolStripMenuItem;
         private ToolStripMenuItem saveTheConfigueToolStripMenuItem;
         private ToolStripMenuItem loadAConfigueToolStripMenuItem;
+        private CheckBox chkHibernate;
     }
 }
