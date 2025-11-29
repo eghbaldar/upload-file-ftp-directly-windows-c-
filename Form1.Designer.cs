@@ -369,7 +369,7 @@
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "UFFD - Upload File FTP Directly";
+            Text = "UFFD - Upload File FTP Directly v2.0";
             Load += Form1_Load;
             pnlFtp.ResumeLayout(false);
             pnlFtp.PerformLayout();

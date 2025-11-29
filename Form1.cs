@@ -56,10 +56,13 @@ namespace UploadDirectly
                     await UploadFileAsync(filePath, item);
                 }
 
-                MessageBox.Show("Upload process completed!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (chkHibernate.Checked)
                 {
                     Application.SetSuspendState(PowerState.Hibernate, true, true);
+                }
+                else
+                {
+                    MessageBox.Show("Upload process completed!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -211,9 +214,11 @@ namespace UploadDirectly
                     {
                         case null:
                             item.SubItems[2].Text = "failed!";
+                            LogTheErrorInUploadProcess($"Failed: {item.SubItems[0].Text} - {DateTime.Now.ToString()}");
                             break;
                         case "Duplicated":
                             item.SubItems[2].Text = "Duplicated!";
+                            LogTheErrorInUploadProcess($"Duplicated: {item.SubItems[0].Text} - {DateTime.Now.ToString()}");
                             break;
                         default:
                             item.SubItems[2].Text = progress;
@@ -233,9 +238,11 @@ namespace UploadDirectly
                 {
                     case null:
                         item.SubItems[2].Text = "failed!";
+                        LogTheErrorInUploadProcess($"{item.SubItems[0].Text} - {DateTime.Now.ToString()}");
                         break;
                     case "Duplicated":
                         item.SubItems[2].Text = "Duplicated";
+                        LogTheErrorInUploadProcess($"Duplicated: {item.SubItems[0].Text} - {DateTime.Now.ToString()}");
                         break;
                     default:
                         item.SubItems[2].Text = progress;
@@ -651,5 +658,23 @@ namespace UploadDirectly
                 txtvirtualPath.Text = config.VirtualPath;
             }
         }
+        private void LogTheErrorInUploadProcess(string error)
+        {
+            try
+            {
+                string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string filePath = Path.Combine(folderPath, "uploaderrors.txt");
+
+                var contentBuilder = new System.Text.StringBuilder();
+                contentBuilder.AppendLine($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {error}");
+
+                File.AppendAllText(filePath, contentBuilder.ToString());
+            }
+            catch (Exception ex)
+            {
+                // You may want to log this too, depending on your needs
+            }
+        }
+
     }
 }

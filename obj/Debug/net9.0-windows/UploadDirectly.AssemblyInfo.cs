@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UploadDirectly")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2aadd1753c18e1e8bd7dac1eb84dd5053c849e37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e27de6a0dde22e37590b4b041ed846666e750e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("UploadDirectly")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UploadDirectly")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
